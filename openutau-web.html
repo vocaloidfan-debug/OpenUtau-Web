@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="tr" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenUtau Web</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #0d0b12; color: #f3f4f6; font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <header class="px-6 py-4 bg-[#191426] border-b border-white/10 flex items-center justify-between sticky top-0 z-20">
+        <div class="flex items-center gap-3">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA1wAAANcAgMAAAA2i0ZXAAAACVBMVEUREREYMjv///9akCufAAADP0lEQVR42u3RsQ3DQAwEQSXsz8n334piWw9FuhNgDAsgMcvjCM76nk/w1PzcSrK4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLg2kGSz6TXj4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLiSrmmCFnFB3FxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcaWXv9eMi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4urHK3YjIuLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLawN5dvk9JHmKi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLK+VaPcg0H8TFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxdWdf23GxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcV1hSSbTa8ZFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXV8o1RcgqPoiLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLiyu9/L1mXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxc5WjFZlxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXBvIs8vvIclTXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXCnX6kGm+SAuLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLq7LnCbpRkMzhMjpAAAAAElFTkSuQmCC" alt="Logo" class="w-10 h-10 rounded-xl object-cover bg-pink-500/20 p-0.5">
+            <div>
+                <h1 class="font-bold text-base text-white">OpenUtau Web</h1>
+                <p class="text-xs text-pink-300/80">openutaumobilev117armeabiv7a.apk2web.app • Android Native (XML)</p>
+            </div>
+        </div>
+        <button onclick="showToast('Veriler güncellendi!')" class="px-3.5 py-2 rounded-xl bg-pink-400/20 hover:bg-pink-400/30 text-pink-300 text-xs font-semibold transition">
+            🔄 Yenile
+        </button>
+    </header>
+
+    <nav id="tabs" class="px-6 pt-3 bg-[#151120] border-b border-white/10 flex gap-2 overflow-x-auto"></nav>
+
+    <main id="content" class="flex-1 max-w-4xl w-full mx-auto p-6 space-y-5"></main>
+
+    <footer class="px-6 py-3 bg-black/50 border-t border-white/10 flex items-center justify-between text-xs text-gray-400">
+        <span>Paket: com.android.openutaumobilev117armeabiv7a</span>
+        <span id="toastText" class="text-pink-400 font-medium">Web uygulaması hazır</span>
+    </footer>
+
+    <script>
+        const appData = {"appName":"openutaumobile v1.1.7 armeabi v7a","packageName":"com.android.openutaumobilev117armeabiv7a","framework":"Android Native (XML)","iconUrl":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA1wAAANcAgMAAAA2i0ZXAAAACVBMVEUREREYMjv///9akCufAAADP0lEQVR42u3RsQ3DQAwEQSXsz8n334piWw9FuhNgDAsgMcvjCM76nk/w1PzcSrK4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLg2kGSz6TXj4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLiSrmmCFnFB3FxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcaWXv9eMi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4urHK3YjIuLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLawN5dvk9JHmKi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLK+VaPcg0H8TFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxdWdf23GxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcV1hSSbTa8ZFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXV8o1RcgqPoiLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLiyu9/L1mXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxc5WjFZlxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXBvIs8vvIclTXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXCnX6kGm+SAuLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLq7LnCbpRkMzhMjpAAAAAElFTkSuQmCC","screens":[{"id":"scr_0","title":"Üst Menü & Araç Çubuğu","layout":"abc_action_bar_title_item.xml","buttons":["Üst Menü & Araç Çubuğu Aç","Ayarları Düzenle","Görünümü Yenile"]},{"id":"scr_1","title":"Action Menu Item Layout","layout":"abc_action_menu_item_layout.xml","buttons":["Action Menu Item Layout Aç","Ayarları Düzenle","Görünümü Yenile"]},{"id":"scr_2","title":"Action Menu Layout","layout":"abc_action_menu_layout.xml","buttons":["Action Menu Layout Aç","Ayarları Düzenle","Görünümü Yenile"]},{"id":"scr_3","title":"Action Mode Bar","layout":"abc_action_mode_bar.xml","buttons":["Action Mode Bar Aç","Ayarları Düzenle","Görünümü Yenile"]},{"id":"scr_4","title":"Action Mode Close Item Material","layout":"abc_action_mode_close_item_material.xml","buttons":["Action Mode Close Item Material Aç","Ayarları Düzenle","Görünümü Yenile"]}],"assetsCount":1752};
+        let activeTab = 0;
+
+        function showToast(text) {
+            document.getElementById('toastText').textContent = '✓ ' + text;
+        }
+
+        function render() {
+            const tabsEl = document.getElementById('tabs');
+            tabsEl.innerHTML = appData.screens.map((s, idx) => `
+                <button onclick="activeTab=${idx};render()" class="px-4 py-2.5 text-xs font-semibold border-b-2 transition whitespace-nowrap ${idx === activeTab ? 'border-pink-400 text-pink-400 bg-pink-400/10 rounded-t-lg' : 'border-transparent text-gray-400 hover:text-white'}">
+                    ${s.title}
+                </button>
+            `).join('');
+
+            const scr = appData.screens[activeTab];
+            document.getElementById('content').innerHTML = `
+                <div class="p-5 rounded-2xl bg-gradient-to-br from-pink-500/15 via-purple-900/10 to-transparent border border-pink-400/25 flex items-center justify-between">
+                    <div>
+                        <span class="text-[11px] uppercase tracking-wider text-pink-400 font-bold">${scr.layout}</span>
+                        <h2 class="text-xl font-bold text-white mt-1">${scr.title}</h2>
+                        <p class="text-xs text-gray-300 mt-1">APK arayüzünden dönüştürülen canlı web ekranı.</p>
+                    </div>
+                    <img src="${appData.iconUrl}" class="w-14 h-14 rounded-2xl">
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    ${scr.buttons.map((b, i) => `
+                        <button onclick="runAction('${b.replace(/'/g, "\\'")}')" class="px-4 py-3.5 rounded-xl font-semibold text-sm transition flex items-center justify-between ${i === 0 ? 'bg-pink-400 text-[#0d0b12] hover:bg-pink-300' : 'bg-white/5 hover:bg-white/10 text-white border border-white/10'}">
+                            <span>${b}</span>
+                            <span>→</span>
+                        </button>
+                    `).join('')}
+                </div>
+                <div id="actionBox" class="hidden p-4 rounded-xl bg-pink-400/10 border border-pink-400/30 text-xs text-pink-100"></div>
+            `;
+        }
+
+        function runAction(label) {
+            const box = document.getElementById('actionBox');
+            box.classList.remove('hidden');
+            box.textContent = '⚡ "' + label + '" işlemi başarıyla çalıştırıldı.';
+            showToast(label + ' çalıştırıldı');
+        }
+
+        render();
+    </script>
+</body>
+</html>
